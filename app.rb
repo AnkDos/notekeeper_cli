@@ -22,6 +22,7 @@ end
 def info()
 puts "\t Welcome to The NoteKeeper Cli"
 puts " Add notes , keep the subject one word and no space as its the uniq constraint "
+puts "To view on web visit http://vez.hgf.mybluehost.me/paperless_api/view_notes.php"
 end
 
 def options()
