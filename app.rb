@@ -33,7 +33,16 @@ def options()
 end
 
 #user Interaction Panel 
+info()
+options()
 
-view_notes()
-
-#Time.now.strftime("%d/%m/%Y %H:%M")
+while true
+    user_inp=Integer(gets)
+    if user_inp==1
+        
+        add_date=Time.now.strftime("%d/%m/%Y %H:%M")
+        due_date=String(gets)
+        subs=String(gets)
+        body=String(gets)
+        add_note(add_date,due_date,subs,body) 
+    elsif user_inp==2   
