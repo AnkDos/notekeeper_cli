@@ -27,6 +27,7 @@ end
 
 def options()
  puts  ""   
+ puts "0. Exit"
  puts "1. Insert a new note "
  puts "2. View Notes"
  puts "3. Delete Notes"
@@ -39,10 +40,25 @@ options()
 while true
     user_inp=Integer(gets)
     if user_inp==1
-        
         add_date=Time.now.strftime("%d/%m/%Y %H:%M")
+        puts "Add Due Date :" 
         due_date=String(gets)
+        puts "Add Subject :"
         subs=String(gets)
+        puts "Add Body :"
         body=String(gets)
-        add_note(add_date,due_date,subs,body) 
+        add_note(add_date,due_date,subs,body)
+      puts "sucessfully added"
+
     elsif user_inp==2   
+        view_notes()
+
+    elsif user_inp==3
+        puts "Enter Subject to proceed deleting"
+        subs=String(gets)
+        delete_note(subs)
+    
+    elsif user_inp==0
+        break
+    end
+end
