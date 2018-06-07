@@ -16,6 +16,7 @@ puts "\t Welcome to The NoteKeeper Cli"
 puts " Add notes , keep the subject short as its the uniq constraint "
 end
 
+add_note("test","test","gigsaid ggu su a","iusiu dyua ")
 
 #user Interaction Panel
 
