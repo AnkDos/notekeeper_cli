@@ -8,7 +8,7 @@ end
 
 def delete_note(subject)
 url=URI("http://vez.hgf.mybluehost.me/paperless_api/delete_note.php?sub=#{subject}")
-del=Net::HTTP(url)
+del=Net::HTTP.get(url)
 end
 
 
@@ -17,8 +17,8 @@ puts "\t Welcome to The NoteKeeper Cli"
 puts " Add notes , keep the subject one word and no space as its the uniq constraint "
 end
 
-add_note("test","test","gigsaid ggu su a","iusiu dyua ")
-
-#user Interaction Panel
+#add_note("test","test","gigsaid ggu su a","iusiu dyua ")
+delete_note("TEST")
+#user Interaction Panel 
 
 #Time.now.strftime("%d/%m/%Y %H:%M")
