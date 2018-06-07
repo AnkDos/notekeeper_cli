@@ -26,7 +26,7 @@ puts "To view on web visit http://vez.hgf.mybluehost.me/paperless_api/view_notes
 end
 
 def options()
- puts  ""   
+ puts  " "   
  puts "0. Exit"
  puts "1. Insert a new note "
  puts "2. View Notes"
