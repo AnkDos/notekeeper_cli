@@ -8,8 +8,9 @@ insert=Net::HTTP.get(url)
 end
 
 def view_notes()
-  url=Net::HTTP.new(URI("http://vez.hgf.mybluehost.me/paperless_api/view_notes.php"))
-  fet=JSON.parse(url)
+  url=URI("http://vez.hgf.mybluehost.me/paperless_api/view_notes.php")  
+  ur=Net::HTTP.get(url)
+  fet=JSON.parse(ur)
   pp fet
 end
 
@@ -63,5 +64,5 @@ while true
 
     elsif user_inp==0
         break
-    end
+    end 
 end
