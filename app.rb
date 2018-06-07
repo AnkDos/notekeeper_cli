@@ -1,5 +1,6 @@
 require 'net/http'
 require 'pp'
+require 'json'
 
 def add_note(date_of_add,due_date,subject,body)
 url=URI("http://vez.hgf.mybluehost.me/paperless_api/insertnote.php?date=#{date_of_add}&due=#{due_date}&sub=#{subject}&body=#{body}")
@@ -7,7 +8,9 @@ insert=Net::HTTP.get(url)
 end
 
 def view_notes()
-
+  url=Net::HTTP.get(URI("http://vez.hgf.mybluehost.me/paperless_api/view_notes.php"))
+  fet=JSON.parse(url)
+  pp fet
 end
 
 def delete_note(subject)
@@ -30,6 +33,6 @@ end
 
 #user Interaction Panel 
 
-
+view_notes()
 
 #Time.now.strftime("%d/%m/%Y %H:%M")
