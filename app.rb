@@ -10,6 +10,10 @@ end
 
 
 def info()
-puts "Welcome to The NoteKeeper Cli"
+puts "\t Welcome to The NoteKeeper Cli"
+puts " Add notes , keep the subject short as its the uniq constraint "
 
 end
+
+
+#user Interaction Panel
