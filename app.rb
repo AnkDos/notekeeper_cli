@@ -49,15 +49,18 @@ while true
         body=String(gets)
         add_note(add_date,due_date,subs,body)
       puts "sucessfully added"
+      options()
 
     elsif user_inp==2   
-        view_notes()
+         view_notes()
+         options()
 
     elsif user_inp==3
         puts "Enter Subject to proceed deleting"
         subs=String(gets)
         delete_note(subs)
-    
+        options()
+        
     elsif user_inp==0
         break
     end
