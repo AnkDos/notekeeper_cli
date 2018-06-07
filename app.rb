@@ -17,8 +17,13 @@ puts "\t Welcome to The NoteKeeper Cli"
 puts " Add notes , keep the subject one word and no space as its the uniq constraint "
 end
 
-#add_note("test","test","gigsaid ggu su a","iusiu dyua ")
-delete_note("TEST")
+def options()
+ 
+    
+end
+
 #user Interaction Panel 
+
+
 
 #Time.now.strftime("%d/%m/%Y %H:%M")
