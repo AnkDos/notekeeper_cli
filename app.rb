@@ -8,7 +8,7 @@ insert=Net::HTTP.get(url)
 end
 
 def view_notes()
-  url=Net::HTTP.get(URI("http://vez.hgf.mybluehost.me/paperless_api/view_notes.php"))
+  url=Net::HTTP.new(URI("http://vez.hgf.mybluehost.me/paperless_api/view_notes.php"))
   fet=JSON.parse(url)
   pp fet
 end
@@ -60,7 +60,7 @@ while true
         subs=String(gets)
         delete_note(subs)
         options()
-        
+
     elsif user_inp==0
         break
     end
